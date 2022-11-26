@@ -5,6 +5,7 @@ import {
   SearchFormBtn,
 } from './Searchbar.styled';
 import { FiSearch } from 'react-icons/fi';
+import PropTypes from 'prop-types';
 
 export const Header = ({ onChange, onSubmit }) => {
   return (
@@ -27,4 +28,9 @@ export const Header = ({ onChange, onSubmit }) => {
       </SearchForm>
     </Searchbar>
   );
+};
+
+Header.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };

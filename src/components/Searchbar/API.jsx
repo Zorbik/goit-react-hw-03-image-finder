@@ -15,8 +15,6 @@ export async function fetchItems(q, page) {
         page: page,
       },
     });
-    console.log('response', response);
-
     return response.data;
   } catch (error) {
     console.error(error);
