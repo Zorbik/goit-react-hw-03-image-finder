@@ -1,13 +1,9 @@
 import { Component } from 'react';
 import { fetchItems } from './components/Searchbar/API';
-import { ImageGallery } from './components/ImageGallery/ImageGallery';
-import { Header } from './components/Searchbar/Searchbar';
-import { Button } from './components/Button/Button';
 import { ColorRing } from 'react-loader-spinner';
-import { Modal } from './components/Modal/Modal';
-import { Box } from './components/Box';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Button, ImageGallery, Modal, Header, Box } from './components';
 
 class App extends Component {
   state = {
@@ -65,7 +61,6 @@ class App extends Component {
   };
   onClickLoadMore = () => {
     this.setState({ page: this.state.page + 1 });
-    console.log('1', this.state.page);
   };
 
   onImageClick = e => {
